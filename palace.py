@@ -49,5 +49,9 @@ def katsu_curry_palace():
         if meal_choice == "no":
             selected_side = None
             break
-
+        elif meal_choice == "yes":
+            print("\nHere are the available sides:")
+            for i, side in enumerate(meal_sides, 1):
+                print(f"{i}. {side.title()}")
+                
 print("Thank you for your order. Enjoy your katsu curry from Katsu Curry Palace! Arigatou gozaimashita!")
