@@ -42,4 +42,34 @@ def katsu_curry_palace():
             except ValueError:
                 print("Invalid input. Please enter numbers separated by commas.")
 
+    meal_sides = ["edamame", "miso soup", "soft drink", "green tea"]
+    print("\nWould you like to make it a meal? It comes with one side.")
+    while True:
+        meal_choice = input("Would you like a meal? (yes/no): ").strip().lower()
+        if meal_choice == "no":
+            selected_side = None
+            break
+        elif meal_choice == "yes":
+            print("\nHere are the available sides:")
+            for i, side in enumerate(meal_sides, 1):
+                print(f"{i}. {side.title()}")
+            while True:
+                side_input = input("Please choose a side by number (e.g., 2): ").strip()
+                if side_input.isdigit() and 1 <= int(side_input) <= len(meal_sides):
+                    selected_side = meal_sides[int(side_input) - 1]
+                    break
+                else:
+                    print("Invalid selection. Please enter a number from the list.")
+
+            while True:
+                upsize_input = input("Would you like to upsize your meal? (yes/no): ").strip().lower()
+                if upsize_input in ["yes", "no"]:
+                    upsized = (upsize_input == "yes")
+                    break
+                else:
+                    print("Please answer 'yes' or 'no'.")
+            break
+        else:
+            print("Please answer 'yes' or 'no'.")
+
 print("Thank you for your order. Enjoy your katsu curry from Katsu Curry Palace! Arigatou gozaimashita!")
