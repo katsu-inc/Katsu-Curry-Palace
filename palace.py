@@ -42,4 +42,12 @@ def katsu_curry_palace():
             except ValueError:
                 print("Invalid input. Please enter numbers separated by commas.")
 
+    meal_sides = ["edamame", "miso soup", "soft drink", "green tea"]
+    print("\nWould you like to make it a meal? It comes with one side.")
+    while True:
+        meal_choice = input("Would you like a meal? (yes/no): ").strip().lower()
+        if meal_choice == "no":
+            selected_side = None
+            break
+
 print("Thank you for your order. Enjoy your katsu curry from Katsu Curry Palace! Arigatou gozaimashita!")
