@@ -1,0 +1,1 @@
+print("Irasshaimase! This is Katsu Curry Palace. Please take a seat!")
