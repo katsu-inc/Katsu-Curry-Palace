@@ -60,5 +60,16 @@ def katsu_curry_palace():
                     break
                 else:
                     print("Invalid selection. Please enter a number from the list.")
-                
+
+            while True:
+                upsize_input = input("Would you like to upsize your meal? (yes/no): ").strip().lower()
+                if upsize_input in ["yes", "no"]:
+                    upsized = (upsize_input == "yes")
+                    break
+                else:
+                    print("Please answer 'yes' or 'no'.")
+            break
+        else:
+            print("Please answer 'yes' or 'no'.")
+
 print("Thank you for your order. Enjoy your katsu curry from Katsu Curry Palace! Arigatou gozaimashita!")
